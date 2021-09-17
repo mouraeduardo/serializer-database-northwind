@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Runtime.Serialization;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.Text.Json;
-using System.Xml.Serialization;
 using agoravai.Models;
 
 namespace agoravai
@@ -14,37 +8,25 @@ namespace agoravai
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var context = new AppDbcontext();
 
-            AppDbcontext context = new AppDbcontext();
+            
+            var Clientes = context.Customers.ToList();
+            var TodasAsCidades = Clientes.Select(x => x.City).OrderBy(x=> x).ToList();
 
-            var Categories = context.Categories.ToList();
-
-            //SerializarBin(Categories);
-            //SerializarXml(Categories);
-            //SerializarJson(Categories);
-        }
-
-        static void SerializarBin(List<Category> Categories)
-        {
-            FileStream fs = new FileStream(@"C:\Users\eduar\OneDrive\Área de Trabalho\agoravai\filebinary.bin", FileMode.Create);
-            BinaryFormatter bf = new BinaryFormatter();
-            bf.Serialize(fs, Categories);
-            fs.Close();
-        }
-        static void SerializarXML (List<Category> Categories)
-        {
-            FileStream fs = new FileStream(@"C:\Users\eduar\OneDrive\Área de Trabalho\agoravai\fileXML.xml", FileMode.Create);
-            XmlSerializer xs = new XmlSerializer(typeof(List<Category>));
-            xs.Serialize(fs, Categories);
-            fs.Close();
-
-        }
-        static void SerializarJson(List<Category> categories)
-        {
-            using (StreamWriter sw = new StreamWriter(@"C:\Users\eduar\OneDrive\Área de Trabalho\agoravai\fileJSON.json"))
+            foreach (var item in TodasAsCidades)
             {
-                sw.Write(JsonSerializer.Serialize(categories));
+                Console.Write(item + ", ");
+            }
+
+           
+            Console.Write("\nDIGITE O NOME DE UMA CIDADE: ");
+            string Cidade = Console.ReadLine();
+            var ListaClientes = Clientes.Where(x => x.City == Cidade).ToList();
+
+            foreach (var item in ListaClientes)
+            {
+                Console.WriteLine(item.CompanyName);
             }
         }
     }

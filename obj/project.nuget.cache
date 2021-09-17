@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "2A38uBGD7QAjB3RG6zWfV0IkkhRpoLZgklpDGca/CKrNkisiLerGnKT0JpKNFjOVfLjciYY+2UROcy2ZRFpucg==",
+  "dgSpecHash": "LAvofsuh7qtoBFwai94t0TkclnNDZYLUKfPqSxMlhJfTLK+QXGCgh9qy9MWhm39Rwyqb2WTidN7yRFuXVW7cKA==",
   "success": true,
   "projectFilePath": "C:\\Users\\eduar\\OneDrive\\Área de Trabalho\\agoravai\\agoravai.csproj",
   "expectedPackageFiles": [
@@ -26,6 +26,7 @@
     "C:\\Users\\eduar\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\eduar\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
     "C:\\Users\\eduar\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "C:\\Users\\eduar\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\eduar\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.0.4\\sqlitepclraw.bundle_e_sqlite3.2.0.4.nupkg.sha512",
     "C:\\Users\\eduar\\.nuget\\packages\\sqlitepclraw.core\\2.0.4\\sqlitepclraw.core.2.0.4.nupkg.sha512",
     "C:\\Users\\eduar\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.0.4\\sqlitepclraw.lib.e_sqlite3.2.0.4.nupkg.sha512",
